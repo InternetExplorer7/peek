@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+<title>YouShare</title>
+    </head>
+    <body>
+       <div id="top">
+        <div id="logo">
+            <img src="images/logo2.png" width="100" id="logoimg" alt="logo">
+        <a href="index.html"><h1><b><font style="color: #1165B1">Peek</font></b>Ninja<font style="font-size: 10px">BETA</font></h1></a>
+        </div>
+        <div id="paypal">
+            <h2>Donate to help us add new features!</h2>
+            <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=kkhorram@gmail.com" 
+            data-button="donate" 
+            data-name="YouShare" 
+            data-currency="USD" 
+            data-callback="http://youshare.kkhorram.info">
+            </script>
+        </div>
+    </div> 
+    
+        <div id="content">
+            <h1 id="missedH1">Oops! You must have missed the video...</h1>
+            <h2 id="missedH2">Hit the button below to make a new link!</h2>
+            <div id="homeButton">
+            <button id="goHome" class="pure-button pure-button-primary">Go Home!</button>
+            </div>
+        </div>
+        
+        <script>
+            $("#goHome").click(function(){
+                window.location = "index.html";
+            });
+        </script>
+    </body>
+    
+    
+</html>
+
+

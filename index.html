@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<head>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<title>PeekNinja</title>
+</head>
+<body>
+
+    <div id="top">
+        <div id="logo">
+            <img src="images/logo2.png" width="100" id="logoimg" alt="logo">
+        <a href="index.html"><h1><b><font style="color: #1165B1">Peek</font></b>Ninja<font style="font-size: 10px">BETA</font></h1></a>
+        </div>
+        <div id="paypal">
+            <h2>Donate to help us add new features!</h2>
+            <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=kkhorram@gmail.com" 
+            data-button="donate" 
+            data-name="YouShare" 
+            data-currency="USD" 
+            data-callback="http://youshare.kkhorram.info">
+            </script>
+        </div>
+    </div> 
+    
+<div id="content">   
+    
+    <h2>Simply enter the YouTube URL below!</h2>
+    <div id="mainForm">
+        <form action="CreatePage.php" method="post" class="pure-form" id="myTextBox">
+                <input type="text" class="pure-input-1-2" name="URL" placeholder="Enter YouTube URL">
+                <input type="submit" value="Go!" class="pure-button pure-button-primary">
+        </form>
+    </div>
+    <br><br>
+    <div id="beta">
+        <h3>We are still in beta...</h3>
+        <h4>But go ahead and try it anyways!</h4>
+        <br>
+        <h5>We plan on adding many features, such as..</h5>
+        <div id='betaImages'>
+            <div class="betaImage">
+                <img src="images/vimeo-logo.png" width='100'>
+                <p>Vimeo Support</p>
+            </div>
+            <div class="betaImage">
+                <img src="images/cell-logo.png" width='100'>
+                <p>Mobile Support</p>
+            </div>
+            <div class="betaImage">
+                <img src="images/chat-logo.png" width='100'>
+                <p>Live Chat</p>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div id="what">
+        <br>
+        <h3>What is <font style="color:#1165B1">Peek</font>Ninja?</h3>
+        <p>PeekNinja lets you and your friends watch YouTube videos together.</p>
+        <p>Once you enter a URL above, you will be taken to a page with the embedded video.</p>
+        <p>Share the link to that page with your friends, and hit "Start!" when you are ready.</p>
+        <br>
+    </div>
+</div>
+    
+    <div id="bottom">
+        <h1>See a bug? Email us at admin@vortexproduction.com</h1>
+        
+        <div id="devBy">
+            <p>Developed By</p>
+            <a href="http://vortexproduction.com" target="_blank"><img src="images/logo.png" alt="Vortex Production" width="50"></a>
+        </div>
+    </div>
+
+<script>
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ window.location = "mobile.html";
+}
+</script>
+
+</body>
+</html>
