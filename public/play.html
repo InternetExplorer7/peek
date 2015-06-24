@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>  
+  <script src="http://apis.google.com/js/client.js?onload=onJSClientLoad"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  </head>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <iframe id="player" width="640" height="390" frameborder="0" title="YouTube video player" src="http://www.youtube.com/embed/u1zgFlCw8Aw?enablejsapi=1&controls=0" type="text/html" allowfullscreen></iframe>
+    <button type="button" id="start" disabled>start</button>
+    <button type="button" id="pause" disabled>pause</button>
+  </body>
+  <script src="play.js"></script>
+</html>
