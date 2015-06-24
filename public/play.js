@@ -46,7 +46,7 @@
     console.log("ID play.js " + uid); 
     uid = parseInt(uid);
     socket.emit('newuser', uid, function(data){
-      id = "http://www.youtube.com/embed/" + data.url + "?enablejsapi=1&controls=0";
+      id = "https://www.youtube.com/embed/" + data.url + "?enablejsapi=1&controls=0";
       document.getElementById("player").src = id;
       console.log(JSON.stringify(data));
       if(data.started === 1){
