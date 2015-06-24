@@ -1,6 +1,11 @@
 
  var socket = io();
 
+ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ window.location.replace('mobile.html');
+}
+
+
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
