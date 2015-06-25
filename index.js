@@ -21,7 +21,10 @@ var io = require('socket.io')(http);
 require('es6-shim');
 
 
-  MongoClient.connect('mongodb://Kavehk:Kevin231@ds051740.mongolab.com:51740/peek', function(err, db){
+  MongoClient.connect('mongodb://Kavehk:Kevin231@ds051740.mongolab.com:51740/peek', function(err, db){ // mongodb://Kavehk:Kevin231@ds051740.mongolab.com:51740/peek
+   /* db.collection('newcon').update({"_id":393,"comments":{"$elemMatch":{"name":"kevin"}}},
+                         {$push:{"comments.$.messages":39}})
+    console.log('updated newcon'); */
 
     io.on('connection', function(socket){
     console.log('a user connected');
@@ -45,6 +48,20 @@ require('es6-shim');
       db.collection('con').update({_id: id}, { $set: { play: 0  } }, {upsert: true});
       change(id);
     });
+
+    /* CHAT MESSAGE */
+    socket.on('message', function(msg, id){
+      db.collection('con').update({_id: id}, { $push: { chat: msg }}); // Add message to collection
+      changemsg(id);//refresh chat to everyone
+    });
+
+    function changemsg(id){
+      setTimeout(function(){
+        db.collection('con').findOne({_id: id}, function(err, doc){
+        io.emit('updatemsg', doc);
+        });
+      }, 1000);
+    }
 
     function change(id){
       setTimeout(function(){

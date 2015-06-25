@@ -29,7 +29,7 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        //player.playVideo();
+   //   event.target.pauseVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -45,6 +45,7 @@
     function stopVideo() {
         player.stopVideo();
     }
+
 
      var uid = window.location.href;
     uid = uid.substring(uid.indexOf("#") + 1);
@@ -68,9 +69,19 @@
                 }
             });
 
-                /*DUMP ARR INTO CHAT-BOX*/
+                      /*DUMP ARR INTO CHAT-BOX*/
+
+          data.chat.forEach(function(item){
+            $("#list").append( "<li>" + item + "</li>");
+          });
+
+
     });
 
+    setTimeout(function(){
+      player.playVideo();
+      player.pauseVideo();
+    },950);
 
 
     /* PLAY IS PRESSED */
@@ -84,9 +95,20 @@
       socket.emit('pause', uid);
     });
 
+    $("#submitmessage").click(function(){ // User pressed submit button
+      socket.emit('message', $("#chatmessage").val(), uid); // send msg
+    });
+
+    socket.on('updatemsg', function(data){
+       $("#list").text('');
+        data.chat.forEach(function(item){
+          $("#list").append("<li>" + item + "</li>");
+          });
+    });
+
+
     socket.on('update', function(data){ // Left off here
       if(data._id === uid){ // User IDs match  
-        console.log("DATA PLAY: " + data.play)
         if(data.play === 1){ // play
           player.playVideo();
         }
