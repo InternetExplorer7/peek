@@ -81,6 +81,7 @@
     setTimeout(function(){
       player.playVideo();
       player.pauseVideo();
+      player.setVolume(80);
     },950);
 
 
@@ -100,10 +101,12 @@
     });
 
     socket.on('updatemsg', function(data){
+      if(data._id === uid){
        $("#list").text('');
         data.chat.forEach(function(item){
           $("#list").append("<li>" + item + "</li>");
           });
+        }
     });
 
 
