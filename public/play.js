@@ -48,6 +48,7 @@
 
 
      var uid = window.location.href;
+     var name;
     uid = uid.substring(uid.indexOf("#") + 1);
     console.log("ID play.js " + uid); 
     uid = parseInt(uid);
@@ -82,23 +83,22 @@
       player.playVideo();
       player.pauseVideo();
       player.setVolume(80);
-    },1250);
+    },950);
 
 
     /* PLAY IS PRESSED */
 
     $("#start").click(function(){
-      console.log("Start button clicked");
+      console.log('sending ID to play: ' + uid);
       socket.emit('play', uid);
     });
 
     $("#pause").click(function(){
-      console.log("Pause button clicked");
       socket.emit('pause', uid);
     });
 
     $("#submitmessage").click(function(){ // User pressed submit button
-      socket.emit('message', $("#chatmessage").val(), uid); // send msg
+      socket.emit('message', $("#chatmessage").val(), uid, name); // send msg
     });
 
     socket.on('updatemsg', function(data){
@@ -113,7 +113,6 @@
 
     socket.on('update', function(data){ // Left off here
       if(data._id === uid){ // User IDs match  
-        console.log("Updating...");
         if(data.play === 1){ // play
           player.playVideo();
         }
