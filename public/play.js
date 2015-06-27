@@ -83,7 +83,8 @@
       player.playVideo();
       player.pauseVideo();
       player.setVolume(80);
-    },950);
+      console.log("Got to setTimeout");
+    },6000);
 
 
     /* PLAY IS PRESSED */
