@@ -102,11 +102,19 @@
       socket.emit('message', $("#chatmessage").val(), uid, name); // send msg
     });
 
+    $("#submitname").click(function(){ // Add name to chat list
+      name = $("#name").val();
+      socket.emit('addname', $("#name").val(), uid);
+    });
+
     socket.on('updatemsg', function(data){
       if(data._id === uid){
        $("#list").text('');
         data.chat.forEach(function(item){
-          $("#list").append("<li>" + item + "</li>");
+          item.arr.forEach(function(l){
+              $("#list").append("<li>" + item.name + " " + l + "</li>");
+            });
+          //$("#list").append("<li>" + item.name + " " + item.arr + "</li>");
           });
         }
     });
