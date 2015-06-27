@@ -68,7 +68,7 @@ require('es6-shim');
         db.collection('con').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
-      }, 2000);
+      }, 9000);
     }
 
 

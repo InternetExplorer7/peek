@@ -82,17 +82,18 @@
       player.playVideo();
       player.pauseVideo();
       player.setVolume(80);
-    },950);
+    },1250);
 
 
     /* PLAY IS PRESSED */
 
     $("#start").click(function(){
-      console.log('sending ID to play: ' + uid);
+      console.log("Start button clicked");
       socket.emit('play', uid);
     });
 
     $("#pause").click(function(){
+      console.log("Pause button clicked");
       socket.emit('pause', uid);
     });
 
@@ -112,6 +113,7 @@
 
     socket.on('update', function(data){ // Left off here
       if(data._id === uid){ // User IDs match  
+        console.log("Updating...");
         if(data.play === 1){ // play
           player.playVideo();
         }
