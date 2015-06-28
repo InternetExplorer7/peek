@@ -72,9 +72,9 @@
 
                       /*DUMP ARR INTO CHAT-BOX*/
 
-          data.chat.forEach(function(item){
+         /* data.chat.forEach(function(item){
             $("#list").append( "<li>" + item + "</li>");
-          });
+          }); */
 
 
     });
@@ -98,6 +98,8 @@
       socket.emit('pause', uid);
     });
 
+    /*
+
     $("#submitmessage").click(function(){ // User pressed submit button
       socket.emit('message', $("#chatmessage").val(), uid, name); // send msg
     });
@@ -119,7 +121,7 @@
           });
         }
     });
-
+*/
 
     socket.on('update', function(data){ // Left off here
       if(data._id === uid){ // User IDs match  
