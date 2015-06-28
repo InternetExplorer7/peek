@@ -46,7 +46,7 @@ a{
 #messagecontainer{
   width: 235px;
   float: right;
-  background-color: red;
+  background-color: #ececec;
   height: 390px;
   overflow: scroll;
   height: 100%;
@@ -63,12 +63,14 @@ a{
   background-color: #ececec;
   font-size: 24px;
   color: #369dbd;
+  background-color:#242424; 
 }
 #pause{
   border: none;
   background-color: #ececec;
   font-size: 24px;
   color: #369dbd;
+  background-color:#242424; 
 }
 
 #chatmessage{
