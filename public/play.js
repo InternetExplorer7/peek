@@ -2,6 +2,9 @@
  var socket = io();
      var name;
 
+     $("#start").trigger('click');
+      $("#pause").trigger('click');
+
 
 
  /* CLIENT SIDE STUFF */
