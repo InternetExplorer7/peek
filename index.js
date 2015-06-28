@@ -21,7 +21,7 @@ var io = require('socket.io')(http);
 require('es6-shim');
 
 
-  MongoClient.connect('mongodb://localhost:27017/peek', function(err, db){ // mongodb://Kavehk:Kevin231@ds051740.mongolab.com:51740/peek
+  MongoClient.connect('mongodb://Kavehk:Kevin231@ds051740.mongolab.com:51740/peek', function(err, db){ // mongodb://Kavehk:Kevin231@ds051740.mongolab.com:51740/peek
    /* db.collection('newcon').update({"_id":393,"comments":{"$elemMatch":{"name":"kevin"}}},
                          {$push:{"comments.$.messages":39}})
     console.log('updated newcon'); */
@@ -77,7 +77,7 @@ require('es6-shim');
         db.collection('newcon').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
-      }, 1250);
+      }, 250);
     }
 
   socket.on('start', function(vid, ip, id){ // User has created video, time to insert to new table
