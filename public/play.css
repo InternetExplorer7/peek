@@ -2,7 +2,7 @@ body, html{
   padding: 0;
   margin: 0;
   font-family: futura;
-  min-width: 600px;
+  min-width: 500px;
   height: 100%;
   width: 100%;
 }
@@ -32,6 +32,23 @@ a{
 #top{
   background-color: #ececec;
   text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#vid{
+ background-color: gray;
+  height: 100%;
+}
+
+
+#messagecontainer{
+  width: 335px;
+  float: right;
+  background-color: red;
+  height: 390px;
+  overflow: scroll;
+  height: 100%;
 }
 #button{
   padding-bottom: 12px;
