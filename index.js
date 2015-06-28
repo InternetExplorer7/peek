@@ -65,15 +65,19 @@ require('es6-shim');
     }); 
 
     function changemsg(id){
+      setTimeout(function(){
         db.collection('newcon').findOne({_id: id}, function(err, doc){
         io.emit('updatemsg', doc);
         });
+      }, 100);
     } 
 
     function change(id){
+      setTimeout(function(){
         db.collection('newcon').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
+      }, 250);
     }
 
   socket.on('start', function(vid, ip, id){ // User has created video, time to insert to new table
