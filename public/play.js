@@ -111,6 +111,7 @@
 
     socket.on('updatemsg', function(data){
       if(data._id === uid){
+        $("#list").text('');
         data.chat.forEach(function(item){
           console.log(item);
           $("#list").append("<li>" + item + "</li>" );
