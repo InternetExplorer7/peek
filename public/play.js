@@ -79,7 +79,7 @@
 
     });
 
-    setTimeout(function(){
+ /*   setTimeout(function(){
       player.playVideo();
       player.pauseVideo();
       player.setVolume(80);
