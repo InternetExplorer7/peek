@@ -98,16 +98,16 @@
       socket.emit('pause', uid);
     });
 
-    
+        $("#submitname").click(function(){ // Add name to chat list
+      name = $("#name").val();
+     // socket.emit('addname', $("#name").val(), uid);
+    }); 
 
     $("#submitmessage").click(function(){ // User pressed submit button
-      socket.emit('message', $("#chatmessage").val(), uid, name); // send msg
+      var msg = ($("#chatmessage").val() + "~" + name);
+      socket.emit('message', , uid); // send msg
     });
 
-    $("#submitname").click(function(){ // Add name to chat list
-      name = $("#name").val();
-      socket.emit('addname', $("#name").val(), uid);
-    });
 
     socket.on('updatemsg', function(data){
       if(data._id === uid){
