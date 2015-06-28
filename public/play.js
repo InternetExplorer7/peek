@@ -9,7 +9,7 @@
  $("#meat").hide();
 
  $("#submitname").click(function(){
-  alert('submit pressed'):
+  alert('submit pressed');
  });
 
  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
