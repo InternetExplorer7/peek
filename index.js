@@ -1,6 +1,6 @@
   var wit = require('node-wit');
   var fs = require('fs');
-  var ACCESS_TOKEN = "DVK7ANMWGHHZ22GFGR6OBPCNDQ4KNS2E";
+  var ACCESS_TOKEN = "GSPC6M23OQB4W2I5KMBWMCQMHI2TJVOF";
   /* WIT.AI */
 
 /* SOCKET.IO */ 
