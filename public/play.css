@@ -31,11 +31,14 @@ a{
 }
 #top{
   background-color: #ececec;
-  height: 45px;
 }
 
 footer{
     background-color: #ececec;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 footer li{
   display: inline-block;
