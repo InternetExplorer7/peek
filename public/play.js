@@ -114,7 +114,7 @@
         $("#list").text('');
         data.chat.forEach(function(item){
           console.log(item);
-          $("#list").append("<li>" + item.substring(item.indexOf('~') + 1) + "</li>" );
+          $("#list").append("<li>" + item.substring(item.indexOf('~') + 1) + " " + item.substring(0, item.indexOf('~')) + "</li>" );
         });
        }// Auth
     });
