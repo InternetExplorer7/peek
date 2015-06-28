@@ -71,6 +71,21 @@ a{
   color: #369dbd;
 }
 
+#chatmessage{
+  width: 100%;
+  height: 20%;
+  font-size: 22px;
+  border: 1px solid #369dbd;
+}
+#submitmessage{
+  color: #ececec;
+  border: none;
+  background-color: white;
+  padding-bottom: 20px;
+  font-size: 22px;
+  color: #369dbd;
+}
+
 footer{
     background-color: #ececec;
   position: absolute;
