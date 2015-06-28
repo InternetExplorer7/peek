@@ -102,3 +102,32 @@ footer li{
 footer li a{
   color: #369dbd;
 }
+
+#card{
+  
+
+   width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #ececec;
+  position: relative;
+  top:200px;
+}
+#card h1{
+  color: #369dbd;
+}
+#card p{
+  font-size: 12px;
+}
+#name{
+  border: none;
+  font-size: 19px;
+  padding: 5px;
+}
+#submitname{
+  border: none;
+  background-color: #d24b4b;
+  font-size: 19px;
+  padding:4px;
+}

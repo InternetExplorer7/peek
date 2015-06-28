@@ -1,11 +1,16 @@
 
  var socket = io();
+     var name;
 
 
 
  /* CLIENT SIDE STUFF */
 
  $("#meat").hide();
+
+ $("#submitname").click(function(){
+  alert('submit pressed'):
+ });
 
  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  window.location.replace('mobile.html');
@@ -54,7 +59,6 @@
 
 
      var uid = window.location.href;
-     var name;
     uid = uid.substring(uid.indexOf("#") + 1);
     console.log("ID play.js " + uid); 
     uid = parseInt(uid);
