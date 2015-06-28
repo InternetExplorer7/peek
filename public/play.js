@@ -111,7 +111,7 @@
       if(data._id === uid){
        $("#list").text('');
         data.chat.forEach(function(item){
-          $("#list").append("<ul id=" + item.name + "> </ul>");
+          $("#list").append("<ul class='list' id=" + item.name + "> </ul>");
           item.arr.forEach(function(l){
               $("#" + item.name).append("<li>" + item.name + " " + l + "</li>");
             });
