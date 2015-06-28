@@ -50,13 +50,13 @@ require('es6-shim');
     });
 
     /* ADD NAME */
-    /*socket.on('addname', function(name, id){
+    socket.on('addname', function(name, id){
       console.log("Adding name");
       db.collection('con').update({_id: id}, {$push: { chat: { name: name, arr:[] } }});
     });
 
     /* CHAT MESSAGE */
-   /* socket.on('message', function(msg, id, name){
+    socket.on('message', function(msg, id, name){
       //db.collection('con').update({_id: id}, { $push: { chat: msg }}); // Add message to collection
       console.log("Adding message to arr " + name);
       db.collection('con').update({_id:id, "chat":{ "$elemMatch":{ "name" : name}}},
@@ -70,8 +70,8 @@ require('es6-shim');
         io.emit('updatemsg', doc);
         });
       }, 100);
-    } */
-    
+    } 
+
     function change(id){
       setTimeout(function(){
         db.collection('con').findOne({_id: id}, function(err, doc){
