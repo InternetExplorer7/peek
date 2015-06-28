@@ -31,7 +31,7 @@ require('es6-shim');
     /* NEW USER CONNECTED */
     socket.on('newuser', function(id, callback){ // Get the JSON and send it back
       console.log("ID in index.js " + id);
-      db.collection('con').findOne({_id: id}, function(err, doc){
+      db.collection('newcon').findOne({_id: id}, function(err, doc){
         callback(doc);
       });
     });
@@ -39,13 +39,13 @@ require('es6-shim');
     /* PRESSED PLAY */
     socket.on('play', function(id){
       console.log('got to play ' + id);
-      db.collection('con').update({_id: id}, { $set: { play: 1, started: 1 }}, {upsert: true});
+      db.collection('newcon').update({_id: id}, { $set: { play: 1, started: 1 }}, {upsert: true});
       change(id);
     });
 
     /* PRESSED PAUSE */
     socket.on('pause', function(id){
-      db.collection('con').update({_id: id}, { $set: { play: 0  } }, {upsert: true});
+      db.collection('newcon').update({_id: id}, { $set: { play: 0  } }, {upsert: true});
       change(id);
     });
 
@@ -58,14 +58,14 @@ require('es6-shim');
     /* CHAT MESSAGE */
     socket.on('message', function(msg, id){
       //db.collection('con').update({_id: id}, { $push: { chat: msg }}); // Add message to collection
-      db.collection('con').update({_id:id},
+      db.collection('newcon').update({_id:id},
                          {$push:{chat : msg}});
       //changemsg(id);//refresh chat to everyone
     }); 
 
     function changemsg(id){
       setTimeout(function(){
-        db.collection('con').findOne({_id: id}, function(err, doc){
+        db.collection('newcon').findOne({_id: id}, function(err, doc){
         io.emit('updatemsg', doc);
         });
       }, 100);
@@ -73,7 +73,7 @@ require('es6-shim');
 
     function change(id){
       setTimeout(function(){
-        db.collection('con').findOne({_id: id}, function(err, doc){
+        db.collection('newcon').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
       }, 250);
@@ -87,7 +87,7 @@ require('es6-shim');
   });
 
   function insert(video, ip, id){
-    db.collection('con').insert({_id: id, host: ip, url: video, play: 0, started: 0, chat: []}) // Setting ID, host, YouTube Video, Play Status (0 === pause) and Chat arr.
+    db.collection('newcon').insert({_id: id, host: ip, url: video, play: 0, started: 0, chat: []}) // Setting ID, host, YouTube Video, Play Status (0 === pause) and Chat arr.
   };
 
 
