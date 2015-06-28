@@ -8,17 +8,37 @@
   <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
   </head>
   <body>
-    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <iframe id="player" width="640" height="390" frameborder="0" title="YouTube video player" src="" type="text/html" allowfullscreen></iframe>
+
+    <nav>
+      <ul>
+        <li><img src="assets/logo.png"/></li>
+        <li><a href="#">about peek</a></li>
+        <li><a href="#">extension</a></li>
+        <li><a href="#">feedback</a></li>
+      </ul>
+    </nav>
+    <div id="top">
+          <iframe id="player" width="640" height="390" frameborder="0" title="YouTube video player" src="" type="text/html" allowfullscreen></iframe>
     <button type="button" id="start" disabled>start</button>
     <button type="button" id="pause" disabled>pause</button>
+      
+    </div>
 
-    <textarea id="chatmessage"></textarea>
+        <textarea id="chatmessage"></textarea>
     <button type="button" id='submitmessage'>Send</button>
     <textarea id="name"></textarea>
     <button type="button" id='submitname'>Submit</button>
-    <ul id='list'>
-    </ul>
+    <div id='list'>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="#">about</a></li>
+        <li><a href="#">extension</a></li>
+        <li><a href="#">feedback</a></li>
+      </ul>
+    </footer>
+    <!-- -->
+
   </body>
   <script src="play.js"></script>
 </html>
