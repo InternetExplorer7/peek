@@ -77,7 +77,7 @@ require('es6-shim');
         db.collection('newcon').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
-      }, 250);
+      }, 750);
     }
 
   socket.on('start', function(vid, ip, id){ // User has created video, time to insert to new table

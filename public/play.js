@@ -92,12 +92,12 @@
 
     });
 
- /*   setTimeout(function(){
+   setTimeout(function(){
       player.playVideo();
       player.pauseVideo();
       player.setVolume(80);
       console.log("Got to setTimeout");
-    },4000); 
+    },3000); 
 
 
     /* PLAY IS PRESSED */
