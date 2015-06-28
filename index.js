@@ -61,7 +61,7 @@ require('es6-shim');
       console.log('got to message, updating.....');
       db.collection('newcon').update({_id:id},
                          {$push:{chat : msg}});
-      //changemsg(id);//refresh chat to everyone
+      changemsg(id);//refresh chat to everyone
     }); 
 
     function changemsg(id){
