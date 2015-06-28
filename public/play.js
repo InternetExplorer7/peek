@@ -9,7 +9,7 @@
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
+    tag.src = "http://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -53,7 +53,7 @@
     console.log("ID play.js " + uid); 
     uid = parseInt(uid);
     socket.emit('newuser', uid, function(data){
-      id = "https://www.youtube.com/embed/" + data.url + "?enablejsapi=1&controls=1";
+      id = "http://www.youtube.com/embed/" + data.url + "?enablejsapi=1&controls=1";
       document.getElementById("player").src = id;
       console.log(JSON.stringify(data));
       if(data.started === 1){
