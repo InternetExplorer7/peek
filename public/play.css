@@ -1,0 +1,46 @@
+body, html{
+  padding: 0;
+  margin: 0;
+  font-family: futura;
+  min-width: 600px;
+  height: 100%;
+  width: 100%;
+}
+nav{
+  background-color: #369bdb;
+}
+ul{
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+}
+nav img{
+  width: 150px;
+}
+nav li{
+  display: inline-block;
+  padding: 1% 5% 1% 5%;
+}
+nav li:nth-child(n+2){
+  position: relative;
+  bottom:25px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+#top{
+  background-color: #ececec;
+  height: 45px;
+}
+
+footer{
+    background-color: #ececec;
+}
+footer li{
+  display: inline-block;
+  padding: 2% 3% 2% 3%;
+}
+footer li a{
+  color: #369dbd;
+}
