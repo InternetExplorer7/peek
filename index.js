@@ -65,20 +65,33 @@ require('es6-shim');
     });
 
     function changemsg(id){
+        db.collection('con').findOne({_id: id}, function(err, doc){
+        io.emit('updatemsg', doc);
+        });
+    }
+
+    /* function changemsg(id){
       setTimeout(function(){
         db.collection('con').findOne({_id: id}, function(err, doc){
         io.emit('updatemsg', doc);
         });
       }, 2000);
-    }
+    } */
 
     function change(id){
+        db.collection('con').findOne({_id: id}, function(err, doc){
+        io.emit('update', doc);
+        });
+    }
+    /*
+  function change(id){
       setTimeout(function(){
         db.collection('con').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
       }, 15000);
     }
+     */
 
 
   socket.on('start', function(vid, ip, id){ // User has created video, time to insert to new table
