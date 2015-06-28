@@ -69,14 +69,14 @@ require('es6-shim');
         db.collection('con').findOne({_id: id}, function(err, doc){
         io.emit('updatemsg', doc);
         });
-      }, 250);
+      }, 450);
     }
     function change(id){
       setTimeout(function(){
         db.collection('con').findOne({_id: id}, function(err, doc){
         io.emit('update', doc);
         });
-      }, 1200);
+      }, 500);
     }
 
   socket.on('start', function(vid, ip, id){ // User has created video, time to insert to new table
