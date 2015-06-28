@@ -9,7 +9,10 @@
  $("#meat").hide();
 
  $("#submitname").click(function(){
-  alert('submit pressed');
+  name = $("#name").val();
+  console.log(name);
+  $("#namealert").hide();
+  $("#meat").fadeIn(1000);
  });
 
  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
