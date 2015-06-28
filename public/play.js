@@ -3,7 +3,7 @@
      var name;
 
      $("#start").trigger('click');
-      $("#pause").trigger('click');
+      
 
 
 
