@@ -58,6 +58,7 @@ require('es6-shim');
     /* CHAT MESSAGE */
     socket.on('message', function(msg, id){
       //db.collection('con').update({_id: id}, { $push: { chat: msg }}); // Add message to collection
+      console.log('got to message, updating.....');
       db.collection('newcon').update({_id:id},
                          {$push:{chat : msg}});
       //changemsg(id);//refresh chat to everyone
