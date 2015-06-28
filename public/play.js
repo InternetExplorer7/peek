@@ -113,6 +113,7 @@
       if(data._id === uid){
         data.chat.forEach(function(item){
           console.log(item);
+          $("#list").append("<li>" + item + "</li>" );
         });
        }// Auth
     });
