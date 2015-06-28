@@ -105,7 +105,7 @@
 
     $("#submitmessage").click(function(){ // User pressed submit button
       var msg = ($("#chatmessage").val() + "~" + name);
-      socket.emit('message', , uid); // send msg
+      socket.emit(msg, uid); // send msg
     });
 
 
