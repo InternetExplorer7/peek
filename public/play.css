@@ -6,6 +6,9 @@ body, html{
   height: 100%;
   width: 100%;
 }
+span{
+  color: #369dbd;
+}
 nav{
   background-color: #369bdb;
 }
