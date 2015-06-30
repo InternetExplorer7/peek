@@ -83,7 +83,12 @@ require('es6-shim');
   socket.on('start', function(vid, ip, id){ // User has created video, time to insert to new table
     var video;
     console.log('started ' + vid + ' ' + ip);
-    video = vid.substring(vid.indexOf("=") + 1); // Video URL
+    if(vid.indexOf('&') === -1){
+      video = vid.substring(vid.indexOf("=") + 1); // Video URL
+    }
+    else{
+      video = vid.substring(vid.indexOf("=") + 1, vid.indexOf("&")); // Video URL
+    }
     insert(video, ip, id)// Insert new table into collection
   });
 
