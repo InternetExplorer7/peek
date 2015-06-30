@@ -62,7 +62,7 @@
 
      var uid = window.location.href;
      var name;
-    uid = uid.substring(uid.indexOf("#") + 1);
+    uid = uid.substring(uid.indexOf("#") + 1, uid.indexOf("&"));
     console.log("ID play.js " + uid); 
     uid = parseInt(uid);
     socket.emit('newuser', uid, function(data){
