@@ -1,4 +1,7 @@
     var socket = io();
+     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ window.location.replace('mobile.html');
+}
     $("#submit").click(function() { // Where the user submits the video they want to watch
         $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
             function(json) {
