@@ -12,6 +12,10 @@ span{
 nav{
   background-color: #369bdb;
 }
+#top p{
+  margin: 0;
+  padding:15px;
+}
 ul{
   margin: 0;
   padding-left: 0;
