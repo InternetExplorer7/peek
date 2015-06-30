@@ -93,9 +93,8 @@ a{
   border: 1px solid #369dbd;
 }
 #submitmessage{
-  color: #ececec;
+  background-color: #ececec;
   border: none;
-  background-color: white;
   padding-bottom: 20px;
   font-size: 22px;
   color: #369dbd;
