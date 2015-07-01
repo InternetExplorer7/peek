@@ -113,7 +113,7 @@
 
         $("#submitname").click(function(){ // Add name to chat list
       name = $("#name").val();
-     // socket.emit('addname', $("#name").val(), uid);
+      //socket.emit('addname', $("#name").val(), uid);
     }); 
 
     $("#submitmessage").click(function(){ // User pressed submit button
