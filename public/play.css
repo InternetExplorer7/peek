@@ -42,27 +42,32 @@ a{
   height: 100%;
   width: 100%;
 }
+#meat{
+  height: 100%;
+  width: 100%;
+}
 
 #vid{
  background-color: #242424;
-  height: 100%;
+  width: 60%;
+  height: 70%;
   overflow: auto;
 }
 
 
 #messagecontainer{
-  width: 235px;
+  width: 40%;
+  height: 70%;
   float: right;
-  background-color: #ececec;
-  height: 390px;
-  overflow: scroll;
-  height: 100%;
-  max-height:430px;
 }
 #messagecontainer li{
   list-style-type: none;
   text-align: left;
  padding: 10px;
+}
+#messagecontainer ul{
+  height: 90%;
+  overflow: scroll;
 }
 #whitespace li{
   background-color: white;
@@ -87,17 +92,22 @@ a{
 }
 
 #chatmessage{
-  width: 100%;
-  height: 20%;
+  width: 70%;
+  height: 30px;
   font-size: 22px;
   border: 1px solid #369dbd;
+  padding: 5px;
 }
 #submitmessage{
+  width: 26%;
+  padding: 5px;
   background-color: #ececec;
+  height: 40px;
   border: none;
   padding-bottom: 20px;
   font-size: 22px;
-  color: #369dbd;
+  background-color: #c94141;
+  color: white;
 }
 
 footer{
@@ -116,8 +126,6 @@ footer li a{
 }
 
 #card{
-  
-
    width: 500px;
   margin: 0 auto;
   text-align: center;
