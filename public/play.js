@@ -113,7 +113,7 @@
 
         $("#submitname").click(function(){ // Add name to chat list
       name = $("#name").val();
-      //socket.emit('addname', $("#name").val(), uid);
+      socket.emit('message', $("#name").val(), uid); // Left off here in play.js
     }); 
 
     $("#submitmessage").click(function(){ // User pressed submit button
@@ -126,8 +126,8 @@
       if(data._id === uid){
         $("#list").text('');
         data.chat.forEach(function(item){
-          console.log(item);
           $("#list").append("<li>" + item.substring(item.indexOf('~') + 1) + " " + item.substring(0, item.indexOf('~')) + "</li>" );
+            
         });
        }// Auth
     });

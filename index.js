@@ -50,9 +50,10 @@ require('es6-shim');
     });
 
     /* ADD NAME */
-   /* socket.on('addname', function(name, id){
+    /*socket.on('addname', function(name, id){ // Un-commented addname function
       console.log("Adding name");
-      db.collection('con').update({_id: id}, {$push: { chat: { name: name, arr:[] } }});
+      db.collection('newcon').update({_id: id}, {name: name});
+      changemsg(id, 'connection')
     }); 
 
     /* CHAT MESSAGE */
@@ -70,7 +71,7 @@ require('es6-shim');
         io.emit('updatemsg', doc);
         });
       }, 100);
-    } 
+    }
 
     function change(id){
       setTimeout(function(){
