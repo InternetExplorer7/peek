@@ -21,6 +21,9 @@ nav{
   margin: 0;
   padding:15px;
 }
+#list .special{
+  text-align: right;
+}
 ul{
   margin: 0;
   padding-left: 0;

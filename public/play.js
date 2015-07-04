@@ -126,7 +126,17 @@
       if(data._id === uid){
         $("#list").text('');
         data.chat.forEach(function(item){
-          $("#list").append("<li>" + item.substring(item.indexOf('~') + 1) + " " + item.substring(0, item.indexOf('~')) + "</li>" );
+                    if(item.includes('~')){
+                      if(item.includes(name)){
+          $("#list").append("<li class='special'>" + item.substring(item.indexOf('~') + 1) + ": " + item.substring(0, item.indexOf('~')) + "</li>" );
+          }
+          else{
+            $("#list").append("<li>" + item.substring(item.indexOf('~') + 1) + ": " + item.substring(0, item.indexOf('~')) + "</li>" );
+          }
+        }
+        else{
+          $("#list").append("<li> " + item + " has connected </li>");
+        }
           $('#list li').get(-1).scrollIntoView();            
         });
        }// Auth
