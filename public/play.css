@@ -24,6 +24,10 @@ nav{
 #list .special{
   text-align: right;
 }
+#list .person{
+  font-weight: bold;
+  display: inline-block;
+}
 ul{
   margin: 0;
   padding-left: 0;
@@ -72,6 +76,7 @@ a{
 #messagecontainer li{
   list-style-type: none;
   text-align: left;
+  font-family: Arial;
  padding: 10px;
 }
 #messagecontainer ul{
