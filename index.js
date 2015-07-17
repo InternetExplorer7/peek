@@ -39,12 +39,14 @@ require('es6-shim');
     /* PRESSED PLAY */
     socket.on('play', function(id){
       console.log('got to play ' + id);
+      console.log("Playing video");
       db.collection('newcon').update({_id: id}, { $set: { play: 1, started: 1 }}, {upsert: true});
       change(id);
     });
 
     /* PRESSED PAUSE */
     socket.on('pause', function(id){
+      console.log("Video paused");
       db.collection('newcon').update({_id: id}, { $set: { play: 0  } }, {upsert: true});
       change(id);
     });
@@ -59,7 +61,7 @@ require('es6-shim');
     /* CHAT MESSAGE */
     socket.on('message', function(msg, id){
       //db.collection('con').update({_id: id}, { $push: { chat: msg }}); // Add message to collection
-      console.log('got to message, updating.....');
+      console.log('User message: ' + msg);
       db.collection('newcon').update({_id:id},
                          {$push:{chat : msg}});
       changemsg(id);//refresh chat to everyone
